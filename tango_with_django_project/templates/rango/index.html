@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<!-- Informs Django's template engine that we will be using static files within the template. -->
+{% load staticfiles %}
+
+<html>
+
+<head>
+    <title>Rango</title>
+</head>
+<body>
+<h1>Rango says...</h1>
+<div>
+    hey there partner!<br/>
+    <strong>{{ boldmessage }}</strong><br/>
+</div>
+<div>
+    <a href="/rango/about/">About</a><br/>
+    <!-- The link to the image -->
+    <img src="{% static 'images/sky.jpg' %}"
+    alt="Picture of the sky" />
+</div>
+
+</body>
+</html>
